@@ -5,7 +5,7 @@ const Header = () => {
     <>
       <nav className="w-full bg-indigo-700 p-5">
         <div className="container flex flex-row items-center justify-between">
-          <div className="inline">
+          <a href="#" className="inline">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256" className="inline">
               <g>
               <g transform="scale(3.2,3.2)">
@@ -19,7 +19,7 @@ const Header = () => {
               </g>
             </svg>
             <span className="text-indigo-50 px-2 font-bold">React Jobs</span>
-          </div>
+          </a>
           <div className="flex flex-row items-center space-x-3 px-3 py-2">
             <a href="#" className="text-indigo-100 duration-300 transition-all rounded-md font-bold px-3 py-2 bg-slate-950 hover:bg-slate-900">Home</a>
             <a href="#" className="text-indigo-100 duration-300 transition-all rounded-md font-bold px-3 py-2 hover:bg-slate-900">Jobs</a>
