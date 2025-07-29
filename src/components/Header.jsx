@@ -3,8 +3,8 @@
 const Header = () => {
   return (
     <>
-      <nav className="w-full bg-indigo-700 p-5">
-        <div className="container flex flex-row items-center justify-between">
+      <nav className="w-full bg-indigo-700 p-5 border-b border-indigo-600">
+        <div className="container flex flex-row mx-auto items-center justify-between">
           <a href="#" className="inline">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256" className="inline">
               <g>
