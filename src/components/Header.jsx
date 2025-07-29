@@ -3,7 +3,7 @@
 const Header = () => {
   return (
     <>
-      <nav className="w-full bg-indigo-700 p-5 border-b border-indigo-600">
+      <nav className="w-full bg-indigo-700 p-5 border-b border-indigo-600 drop-shadow-md">
         <div className="container flex flex-row mx-auto items-center justify-between">
           <a href="#" className="inline">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256" className="inline">
@@ -20,7 +20,7 @@ const Header = () => {
             </svg>
             <span className="text-indigo-50 px-2 font-bold">React Jobs</span>
           </a>
-          <div className="flex flex-row items-center space-x-3 px-3 py-2">
+          <div className="hidden sm:flex sm:flex-row items-center space-x-3 px-3 py-2">
             <a href="#" className="text-indigo-100 duration-300 transition-all rounded-md font-bold px-3 py-2 bg-slate-950 hover:bg-slate-900">Home</a>
             <a href="#" className="text-indigo-100 duration-300 transition-all rounded-md font-bold px-3 py-2 hover:bg-slate-900">Jobs</a>
             <a href="#" className="text-indigo-100 duration-300 transition-all rounded-md font-bold px-3 py-2 hover:bg-slate-900">Add Job</a>
