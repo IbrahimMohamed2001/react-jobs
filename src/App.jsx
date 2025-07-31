@@ -5,7 +5,7 @@ const App = () => {
   return <>
     <Header />
     <Hero>
-      Find <b>React Jobs</b> the fits your skills and needs
+      Find <b>React Jobs</b> that fits your skills and needs
     </Hero>
   </>
 };
