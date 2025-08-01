@@ -15,7 +15,7 @@ const HomeCards = () => {
         <div className="rounded-md bg-indigo-200 px-6 py-5 flex flex-col space-y-6 w-full duration-500 transition-all md:w-1/2 hover:bg-indigo-100">
           <div className="flex flex-col space-y-1">
             <div className="text-black text-2xl font-bold">For Employers</div>
-          <div className="text-black text-sm font-bold">List your job to find perfect developer for the role</div>
+          <div className="text-black text-sm font-bold">List your job to find the perfect developer for the role</div>
           </div>
           <a href="#" className='text-indigo-50 self-start duration-300 transition-all rounded-md font-bold px-4 py-3 bg-indigo-600 hover:bg-indigo-500'>Add Job</a>
         </div>
