@@ -23,7 +23,7 @@ const Header = () => {
             </svg>
             <span className="text-indigo-50 px-2 font-bold hidden sm:inline">React Jobs</span>
           </a>
-          <div className="hidden sm:flex sm:flex-row items-center space-x-3 px-3 py-2">
+          <div className="flex flex-row items-center space-x-3 px-3 py-2">
             <a href="#" className="text-indigo-100 duration-300 transition-all rounded-md font-bold px-3 py-2 bg-slate-950 hover:bg-slate-900">Home</a>
             <a href="#" className="text-indigo-100 duration-300 transition-all rounded-md font-bold px-3 py-2 hover:bg-slate-900">Jobs</a>
             <a href="#" className="text-indigo-100 duration-300 transition-all rounded-md font-bold px-3 py-2 hover:bg-slate-900">Add Job</a>
