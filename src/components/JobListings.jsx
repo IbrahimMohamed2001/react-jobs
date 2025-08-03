@@ -16,9 +16,8 @@ const JobListings = () => {
             </div>
             <p className="text-slate-900 text-xs font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, reprehenderit! Ipsum tempore quas autem atque. Eum voluptatem quas accusamus earum assumenda molestias non, cumque obcaecati dicta? Praesentium veritatis rem voluptatum.</p>
             <div className="w-full flex flex-col space-y-1">
-              <p className="text-indigo-500 text-xs font-bold">$70 - $80 K/Year</p>
+              <p className="text-indigo-500 text-xs font-bold pt-1">$70 - $80 K/Year</p>
               <hr className="border-1 bg-gray-500 w-full"/>
-
             </div>
             <div className="flex flex-col w-full space-y-3 pb-3">
               <p className="text-red-700 font-bold text-xs">Boston, MA</p>
