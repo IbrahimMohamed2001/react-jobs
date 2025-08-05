@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {FaMapMarker} from 'react-icons/fa';
 
 const JobCard = ({
-  rule = 'Senior React Developer',
+  title = 'Senior React Developer',
   type = 'Full-Time',
   description = 'Some thing',
   salary = '$70 - $80 K/Year',
@@ -28,7 +28,7 @@ const JobCard = ({
         <h4 className="text-gray-400 font-bold text-sm">{type}</h4>
 
         <h2 className="text-slate-900 text-xl font-bold">
-          {rule}
+          {title}
         </h2>
       </div>
 

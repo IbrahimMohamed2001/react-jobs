@@ -16,7 +16,7 @@ const JobListings = () => {
             {recentJobs.map (item => (
               <JobCard
                 key={item.id}
-                rule={item.title}
+                title={item.title}
                 type={item.type}
                 description={item.description}
                 location={item.location}
