@@ -9,7 +9,7 @@ const HomeCards = () => {
             <div className="text-black text-2xl font-bold">For Developers</div>
             <div className="text-black text-sm font-bold">Browse our React Jobs and start your career today</div>
           </div>
-          <a href="#" className='text-indigo-50 self-start duration-300 transition-all rounded-md font-bold px-4 py-3 bg-slate-950 hover:bg-slate-700'>Browse Jobs</a>
+          <a href="/jobs" className='text-indigo-50 self-start duration-300 transition-all rounded-md font-bold px-4 py-3 bg-slate-950 hover:bg-slate-700'>Browse Jobs</a>
         </div>
 
         <div className="rounded-md bg-indigo-100 px-6 py-5 flex flex-col space-y-6 w-full duration-500 transition-all drop-shadow-md md:w-1/2 hover:bg-indigo-50">
@@ -17,7 +17,7 @@ const HomeCards = () => {
             <div className="text-blac k text-2xl font-bold">For Employers</div>
           <div className="text-black text-sm font-bold">List your job to find the perfect developer for the role</div>
           </div>
-          <a href="#" className='text-indigo-50 self-start duration-300 transition-all rounded-md font-bold px-4 py-3 bg-indigo-600 hover:bg-indigo-500'>Add Job</a>
+          <a href="/add-job" className='text-indigo-50 self-start duration-300 transition-all rounded-md font-bold px-4 py-3 bg-indigo-600 hover:bg-indigo-500'>Add Job</a>
         </div>
       </div>
     </section>

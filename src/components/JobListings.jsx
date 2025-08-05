@@ -21,7 +21,7 @@ const JobListings = () => {
                 description={item.description}
                 location={item.location}
                 salary={item.salary}
-                href={`/job/${item.id}`}
+                href={`/jobs/${item.id}`}
               />
             ))}
           </div>
