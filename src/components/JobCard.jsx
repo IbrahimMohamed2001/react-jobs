@@ -27,7 +27,7 @@ const JobCard = ({
       <div className="flex flex-col w-full space-y-0.5">
         <h4 className="text-gray-400 font-bold text-sm">{type}</h4>
 
-        <h2 className="text-slate-900 text-2xl font-bold">
+        <h2 className="text-slate-900 text-xl font-bold">
           {rule}
         </h2>
       </div>
