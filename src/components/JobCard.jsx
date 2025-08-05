@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const JobCard = ({
   rule = 'Senior React Developer',
@@ -6,8 +6,15 @@ const JobCard = ({
   description = 'Some thing',
   salary = '$70 - $80 K/Year',
   location = 'Boston, MA',
-  href = "#",
+  href = '#',
 }) => {
+  const [showFullDescription, setShowFullDescription] = useState (false);
+
+  let cutDescription = description;
+  if (!showFullDescription) {
+    cutDescription = description.substring (0, 97) + '...';
+  }
+
   return (
     <div className="flex flex-col items-start px-5 
                             justify-center rounded-md 
@@ -25,8 +32,15 @@ const JobCard = ({
       </div>
 
       <p className="text-slate-900 text-xs font-semibold">
-        {description}
+        {cutDescription}
       </p>
+
+      <button
+        className="text-indigo-500 hover:text-indigo-600 text-sm"
+        onClick={() => setShowFullDescription ((prevState) => ! prevState)}
+      >
+        {showFullDescription ? 'Less' : 'More'}
+      </button>
 
       <div className="w-full flex flex-col space-y-1">
         <p className="text-indigo-500 text-xs font-bold pt-1">
