@@ -3,7 +3,7 @@ import JobCard from './JobCard';
 import jobs from '../jobs.json';
 
 const JobListings = () => {
-  console.log (jobs);
+  const recentJobs = jobs.slice(0, 3);
   return (
     <section id="job-listings" className="w-full bg-indigo-50">
       <div className="container mx-auto py-4">
@@ -13,7 +13,7 @@ const JobListings = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-y-3 md:grid-cols-2 md:gap-x-3 lg:grid-cols-3">
-            {jobs.map (item => (
+            {recentJobs.map (item => (
               <JobCard
                 key={item.id}
                 rule={item.title}
