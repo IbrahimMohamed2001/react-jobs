@@ -1,7 +1,11 @@
-import React from 'react';
+import JobListings from '../components/JobListings';
 
 const JobsPage = () => {
-  return <div>JobsPage</div>;
+  return (
+    <section className="w-full min-h-screen mx-auto bg-indigo-50">
+      <JobListings />
+    </section>
+  );
 };
 
 export default JobsPage;
