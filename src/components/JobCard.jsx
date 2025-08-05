@@ -6,6 +6,7 @@ const JobCard = ({
   description = 'Some thing',
   salary = '$70 - $80 K/Year',
   location = 'Boston, MA',
+  href = "#",
 }) => {
   return (
     <div className="flex flex-col items-start px-5 
@@ -29,7 +30,7 @@ const JobCard = ({
 
       <div className="w-full flex flex-col space-y-1">
         <p className="text-indigo-500 text-xs font-bold pt-1">
-          {salary}
+          {salary} / Year
         </p>
 
         <hr className="border-1 bg-gray-500 w-full" />
@@ -39,7 +40,7 @@ const JobCard = ({
         <p className="text-red-700 font-bold text-xs">{location}</p>
 
         <a
-          href="#"
+          href={href}
           className="text-white bg-indigo-600 w-full text-center
                       rounded-md py-1 transition-all duration-300 
                       hover:bg-indigo-500"
