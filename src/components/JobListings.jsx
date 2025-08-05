@@ -8,7 +8,7 @@ const JobListings = () => {
     <section id="job-listings" className="w-full bg-indigo-50">
       <div className="container mx-auto py-4">
         <div className="flex flex-col items-center justify-center space-y-5 px-5">
-          <div className="text-center text-2xl text-indigo-500 font-bold">
+          <div className="text-center text-2xl text-indigo-500 font-bold md:text-3xl">
             Browse Jobs
           </div>
 
