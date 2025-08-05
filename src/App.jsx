@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import HomeCards from "./components/HomeCards";
 import JobListings from "./components/JobListings";
+import AllJobs from "./components/AllJobs";
+
 const App = () => {
   return <>
     <Header />
@@ -11,6 +13,7 @@ const App = () => {
     </Hero>
     <HomeCards />
     <JobListings />
+    <AllJobs />
   </>
 };
 
