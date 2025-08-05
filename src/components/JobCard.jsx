@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {FaMapMarker} from 'react-icons/fa';
+import {Link} from 'react-router-dom';
 
 const JobCard = ({
   title = 'Senior React Developer',
@@ -38,7 +39,7 @@ const JobCard = ({
 
       <button
         className="text-indigo-500 hover:text-indigo-600 text-sm"
-        onClick={() => setShowFullDescription ((prevState) => ! prevState)}
+        onClick={() => setShowFullDescription (prevState => !prevState)}
       >
         {showFullDescription ? 'Less' : 'More'}
       </button>
@@ -53,18 +54,18 @@ const JobCard = ({
 
       <div className="flex flex-col w-full space-y-3 pb-3">
         <p className="text-red-700 font-bold text-xs">
-          <FaMapMarker className='inline text-lg mr-1'/>
+          <FaMapMarker className="inline text-lg mr-1" />
           {location}
         </p>
 
-        <a
-          href={href}
+        <Link
+          to={href}
           className="text-white bg-indigo-600 w-full text-center
                       rounded-md py-1 transition-all duration-300 
                       hover:bg-indigo-500"
         >
           Read More
-        </a>
+        </Link>
       </div>
     </div>
   );
