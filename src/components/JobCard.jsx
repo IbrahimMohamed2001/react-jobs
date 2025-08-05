@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {FaMapMarker} from 'react-icons/fa';
 
 const JobCard = ({
   rule = 'Senior React Developer',
@@ -51,7 +52,10 @@ const JobCard = ({
       </div>
 
       <div className="flex flex-col w-full space-y-3 pb-3">
-        <p className="text-red-700 font-bold text-xs">{location}</p>
+        <p className="text-red-700 font-bold text-xs">
+          <FaMapMarker className='inline text-lg mr-1'/>
+          {location}
+        </p>
 
         <a
           href={href}
