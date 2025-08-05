@@ -1,6 +1,10 @@
-import {Link} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
 
 const Header = () => {
+  const linkClass = ({isActive}) =>
+                isActive
+                  ? 'text-indigo-100 duration-300 transition-all rounded-md font-bold px-3 py-2 bg-slate-950 hover:bg-slate-900'
+                  : 'text-indigo-100 duration-300 transition-all rounded-md font-bold px-3 py-2 hover:bg-slate-900';
   return (
     <section>
       <nav className="w-full bg-indigo-700 p-5 border-b border-indigo-600 drop-shadow-md">
@@ -56,24 +60,24 @@ const Header = () => {
             </span>
           </Link>
           <div className="flex flex-row items-center space-x-3 px-3 py-2">
-            <Link
+            <NavLink
               to="/"
-              className="text-indigo-100 duration-300 transition-all rounded-md font-bold px-3 py-2 bg-slate-950 hover:bg-slate-900"
+              className={linkClass}
             >
               Home
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/jobs"
-              className="text-indigo-100 duration-300 transition-all rounded-md font-bold px-3 py-2 hover:bg-slate-900"
+              className={linkClass}
             >
               Jobs
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/add-job"
-              className="text-indigo-100 duration-300 transition-all rounded-md font-bold px-3 py-2 hover:bg-slate-900"
+              className={linkClass}
             >
               Add Job
-            </Link>
+            </NavLink>
           </div>
         </div>
       </nav>
