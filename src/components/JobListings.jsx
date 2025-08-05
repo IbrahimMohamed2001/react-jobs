@@ -3,7 +3,7 @@ import JobCard from './JobCard';
 import jobs from '../jobs.json';
 
 const JobListings = ({isHome = false}) => {
-  const jobListings = isHome ? jobs.slice (0, 3) : jobs;
+  const jobListings = isHome ? jobs["jobs"].slice (0, 3) : jobs["jobs"];
   return (
     <section id="job-listings" className="w-full bg-indigo-50">
       <div className="container mx-auto py-4">
