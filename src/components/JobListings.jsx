@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import JobCard from './JobCard';
+import Spinner from './Spinner';
 
 const JobListings = ({isHome = false}) => {
   const [jobs, setJobs] = useState ([]);
@@ -29,10 +30,10 @@ const JobListings = ({isHome = false}) => {
             {isHome ? 'Recent Jobs' : 'Browse Jobs'}
           </div>
 
-          <div className="grid grid-cols-1 gap-y-3 md:grid-cols-2 md:gap-x-3 lg:grid-cols-3">
-            {loading
-              ? <h2>Loading...</h2>
-              : jobs.map (item => (
+          {loading
+            ? <Spinner loading={loading} />
+            : <div className="grid grid-cols-1 gap-y-3 md:grid-cols-2 md:gap-x-3 lg:grid-cols-3">
+                {jobs.map (item => (
                   <JobCard
                     key={item.id}
                     title={item.title}
@@ -43,7 +44,7 @@ const JobListings = ({isHome = false}) => {
                     href={`/jobs/${item.id}`}
                   />
                 ))}
-          </div>
+              </div>}
         </div>
       </div>
     </section>
