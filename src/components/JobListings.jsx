@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const JobListings = () => {
   return (
@@ -10,56 +10,43 @@ const JobListings = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-y-3 md:grid-cols-2 md:gap-x-3 lg:grid-cols-3">
-            <div className="flex flex-col items-start px-5 justify-center rounded-md bg-white drop-shadow-md py-3 space-y-3">
-            <div className="flex flex-col w-full space-y-0.5">
-              <h4 className="text-gray-400 font-bold text-sm">Full-time</h4>
-              <h2 className="text-slate-900 text-2xl font-bold">Senior React Developer</h2>
+            <div className="flex flex-col items-start px-5 
+                            justify-center rounded-md 
+                            bg-white drop-shadow-md py-3 
+                            space-y-3 transition-all 
+                            duration-300 hover:bg-slate-50 
+                            hover:shadow-indigo-300 
+                            hover:shadow-lg hover:-translate-y-1">
+              <div className="flex flex-col w-full space-y-0.5">
+                <h4 className="text-gray-400 font-bold text-sm">Full-time</h4>
+                <h2 className="text-slate-900 text-2xl font-bold">
+                  Senior React Developer
+                </h2>
+              </div>
+              <p className="text-slate-900 text-xs font-semibold">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, reprehenderit! Ipsum tempore quas autem atque. Eum voluptatem quas accusamus earum assumenda molestias non, cumque obcaecati dicta? Praesentium veritatis rem voluptatum.
+              </p>
+              <div className="w-full flex flex-col space-y-1">
+                <p className="text-indigo-500 text-xs font-bold pt-1">
+                  $70 - $80 K/Year
+                </p>
+                <hr className="border-1 bg-gray-500 w-full" />
+              </div>
+              <div className="flex flex-col w-full space-y-3 pb-3">
+                <p className="text-red-700 font-bold text-xs">Boston, MA</p>
+                <a
+                  href="#"
+                  className="text-white bg-indigo-600 w-full text-center rounded-md py-1 transition-all duration-300 hover:bg-indigo-500"
+                >
+                  Read More
+                </a>
+              </div>
             </div>
-            <p className="text-slate-900 text-xs font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, reprehenderit! Ipsum tempore quas autem atque. Eum voluptatem quas accusamus earum assumenda molestias non, cumque obcaecati dicta? Praesentium veritatis rem voluptatum.</p>
-            <div className="w-full flex flex-col space-y-1">
-              <p className="text-indigo-500 text-xs font-bold pt-1">$70 - $80 K/Year</p>
-              <hr className="border-1 bg-gray-500 w-full"/>
-            </div>
-            <div className="flex flex-col w-full space-y-3 pb-3">
-              <p className="text-red-700 font-bold text-xs">Boston, MA</p>
-              <a href="#" className="text-white bg-indigo-600 w-full text-center rounded-md py-1 transition-all duration-300 hover:bg-indigo-500">Read More</a>
-            </div>
-          </div>
-            <div className="flex flex-col items-start px-5 justify-center rounded-md bg-white drop-shadow-md py-3 space-y-3">
-            <div className="flex flex-col w-full space-y-0.5">
-              <h4 className="text-gray-400 font-bold text-sm">Full-time</h4>
-              <h2 className="text-slate-900 text-2xl font-bold">Senior React Developer</h2>
-            </div>
-            <p className="text-slate-900 text-xs font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, reprehenderit! Ipsum tempore quas autem atque. Eum voluptatem quas accusamus earum assumenda molestias non, cumque obcaecati dicta? Praesentium veritatis rem voluptatum.</p>
-            <div className="w-full flex flex-col space-y-1">
-              <p className="text-indigo-500 text-xs font-bold pt-1">$70 - $80 K/Year</p>
-              <hr className="border-1 bg-gray-500 w-full"/>
-            </div>
-            <div className="flex flex-col w-full space-y-3 pb-3">
-              <p className="text-red-700 font-bold text-xs">Boston, MA</p>
-              <a href="#" className="text-white bg-indigo-600 w-full text-center rounded-md py-1 transition-all duration-300 hover:bg-indigo-500">Read More</a>
-            </div>
-          </div>
-            <div className="flex flex-col items-start px-5 justify-center rounded-md bg-white drop-shadow-md py-3 space-y-3">
-            <div className="flex flex-col w-full space-y-0.5">
-              <h4 className="text-gray-400 font-bold text-sm">Full-time</h4>
-              <h2 className="text-slate-900 text-2xl font-bold">Senior React Developer</h2>
-            </div>
-            <p className="text-slate-900 text-xs font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, reprehenderit! Ipsum tempore quas autem atque. Eum voluptatem quas accusamus earum assumenda molestias non, cumque obcaecati dicta? Praesentium veritatis rem voluptatum.</p>
-            <div className="w-full flex flex-col space-y-1">
-              <p className="text-indigo-500 text-xs font-bold pt-1">$70 - $80 K/Year</p>
-              <hr className="border-1 bg-gray-500 w-full"/>
-            </div>
-            <div className="flex flex-col w-full space-y-3 pb-3">
-              <p className="text-red-700 font-bold text-xs">Boston, MA</p>
-              <a href="#" className="text-white bg-indigo-600 w-full text-center rounded-md py-1 transition-all duration-300 hover:bg-indigo-500">Read More</a>
-            </div>
-          </div>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default JobListings
+export default JobListings;
