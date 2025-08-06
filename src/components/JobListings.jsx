@@ -42,7 +42,7 @@ const JobListings = ({isHome = false}) => {
                     description={item.description}
                     location={item.location}
                     salary={item.salary}
-                    href={`/jobs/${item.id}`}
+                    href={`/job/${item.id}`}
                   />
                 ))}
               </div>}
