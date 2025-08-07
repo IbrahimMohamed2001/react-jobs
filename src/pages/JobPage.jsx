@@ -18,8 +18,8 @@ const JobPage = () => {
         </div>
 
         <div className="px-7 py-5 mx-auto w-full">
-          <div class="grid grid-flow-col grid-cols-3 gap-5">
-            <div class="col-span-2 bg-white rounded-md px-6 py-3 drop-shadow-md">
+          <div class="grid grid-cols-1 gap-5 md:grid-flow-col md:grid-cols-3">
+            <div class="bg-white rounded-md px-6 py-3 drop-shadow-md transition-all duration-300 hover:shadow-md hover:shadow-indigo-400 hover:-translate-y-1 md:col-span-2">
               <div className="flex flex-col items-start justify-center space-y-3">
                 <div className="text-sm font-bold text-gray-400">
                   {job.type}
@@ -33,7 +33,7 @@ const JobPage = () => {
                 </p>
               </div>
             </div>
-            <div class="col-span-2 bg-white rounded-md px-6 py-3 drop-shadow-md">
+            <div class="bg-white rounded-md px-6 py-3 drop-shadow-md transition-all duration-300 hover:shadow-md hover:shadow-indigo-400 hover:-translate-y-1 md:col-span-2">
               <div className="flex flex-col items-start justify-center space-y-3">
                 <div className="text-indigo-700 font-bold text-md">
                   Job Description
@@ -50,7 +50,7 @@ const JobPage = () => {
                 </div>
               </div>
             </div>
-            <div class="row-span-2 bg-white rounded-md px-3 py-3 drop-shadow-md">
+            <div class="bg-white rounded-md px-3 py-3 drop-shadow-md transition-all duration-300 hover:shadow-md hover:shadow-indigo-400 hover:-translate-y-1 md:row-span-2">
               <div className="flex flex-col items-start justify-center space-y-3">
                 <div className="text-indigo-700 font-bold text-md">
                   Company Info
@@ -91,11 +91,11 @@ const JobPage = () => {
 
         {/* Adding delete and edit buttons! */}
         <div className="flex flex-row items-center w-full text-white font-bold justify-center space-x-3 py-3">
-          <Link to={`/jobs/edit/${job.id}`} className="bg-indigo-700 px-6 py-2 rounded-full transition-all duration-300 hover:bg-indigo-500 hover:-translate-y-1">
+          <Link to={`/jobs/edit/${job.id}`} className="bg-indigo-700 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-indigo-500 hover:-translate-y-1">
             Edit Job
           </Link>
 
-          <Link to={`/jobs/delete/${job.id}`} className="bg-red-600 px-6 py-2 rounded-full transition-all duration-300 hover:bg-red-500 hover:-translate-y-1">
+          <Link to={`/jobs/delete/${job.id}`} className="bg-red-600 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-red-500 hover:-translate-y-1">
             Delete Job
           </Link>
         </div>
