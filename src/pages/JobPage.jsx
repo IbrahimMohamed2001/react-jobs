@@ -6,7 +6,7 @@ const JobPage = () => {
   const job = useLoaderData ();
 
   return (
-    <div className="w-full min-h-screen mx-auto bg-indigo-50">
+    <div className="w-full mx-auto bg-indigo-50">
       <div className="flex flex-col items-center justify-center">
         <div className="w-full bg-white px-7 py-3">
           <Link
@@ -19,7 +19,7 @@ const JobPage = () => {
 
         <div className="px-7 py-5 mx-auto w-full">
           <div className="grid grid-rows-3 ">
-            <div class="grid grid-flow-col grid-rows-3 gap-5">
+            <div class="grid grid-flow-col grid-cols-3 gap-5">
               <div class="col-span-2 bg-white rounded-md px-6 py-3 drop-shadow-md">
                 <div className="flex flex-col items-start justify-center space-y-3">
                   <div className="text-sm font-bold text-gray-400">
@@ -34,7 +34,7 @@ const JobPage = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-span-2 row-span-2 bg-white rounded-md px-6 py-3 drop-shadow-md">
+              <div class="col-span-2 bg-white rounded-md px-6 py-3 drop-shadow-md">
                 <div className="flex flex-col items-start justify-center space-y-3">
                   <div className="text-indigo-700 font-bold text-md">
                     Job Description
@@ -50,8 +50,33 @@ const JobPage = () => {
                   </div>
                 </div>
               </div>
-              <div class="row-span-3 bg-white rounded-md px-6 py-3 drop-shadow-md">
-                03
+              <div class="row-span-2 bg-white rounded-md px-3 py-3 drop-shadow-md">
+                <div className="flex flex-col items-start justify-center space-y-3">
+                  <div className="text-indigo-700 font-bold text-md">
+                    Company Info
+                  </div>
+
+                  <div className="text-md md:text-lg">
+                    {job.company.name}
+                  </div>
+
+                  <div className="text-xs md:text-sm">
+                    {job.company.description}
+                  </div>
+
+                  <hr className="border-1 bg-gray-500 w-full" />
+
+                  <div className="text-md">Contact Email:</div>
+
+                  <div className="bg-indigo-200 rounded-sm font-bold text-xs w-full px-2 py-2">
+                    {job.company.contactEmail}
+                  </div>
+                  <div className="text-md">Contact Phone:</div>
+                  <div className="bg-indigo-200 rounded-sm font-bold text-xs w-full px-2 py-2">
+                    {job.company.contactPhone}
+                  </div>
+                  <div></div>
+                </div>
               </div>
             </div>
           </div>
