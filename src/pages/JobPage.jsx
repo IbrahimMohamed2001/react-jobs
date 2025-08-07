@@ -35,7 +35,20 @@ const JobPage = () => {
                 </div>
               </div>
               <div class="col-span-2 row-span-2 bg-white rounded-md px-6 py-3 drop-shadow-md">
-                02
+                <div className="flex flex-col items-start justify-center space-y-3">
+                  <div className="text-indigo-700 font-bold text-md">
+                    Job Description
+                  </div>
+                  <div className="text-sm">
+                    {job.description}
+                  </div>
+                  <div className="text-indigo-700 font-bold text-md pt-5">
+                    Salary
+                  </div>
+                  <div className="text-sm">
+                    {job.salary} / Year
+                  </div>
+                </div>
               </div>
               <div class="row-span-3 bg-white rounded-md px-6 py-3 drop-shadow-md">
                 03
