@@ -91,11 +91,11 @@ const JobPage = () => {
 
         {/* Adding delete and edit buttons! */}
         <div className="flex flex-row items-center w-full text-white font-bold justify-center space-x-3 py-3">
-          <Link to={`/jobs/edit/${job.id}`} className="bg-indigo-700 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-indigo-500 hover:-translate-y-1">
+          <Link to={`/jobs/edit/${job.id}`} className="bg-indigo-700 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-indigo-500 hover:-translate-y-0.5">
             Edit Job
           </Link>
 
-          <Link to={`/jobs/delete/${job.id}`} className="bg-red-600 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-red-500 hover:-translate-y-1">
+          <Link to={`/jobs/delete/${job.id}`} className="bg-red-600 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-red-500 hover:-translate-y-0.5">
             Delete Job
           </Link>
         </div>
