@@ -23,6 +23,7 @@ const AddJobPage = () => {
               <option value="Full-Time" selected>Full-Time</option>
               <option value="Part-Time">Part-Time</option>
               <option value="Remote">Remote</option>
+              <option value="Internship">Internship</option>
             </select>
           </div>
 
