@@ -111,6 +111,36 @@ const AddJobPage = () => {
               placeholder="Add a brief overview about your company, your vision, etc"
             />
           </div>
+          <div>
+            <label
+              htmlFor="contact_email"
+              className="font-bold text-sm mb-1"
+            >
+              Contact Email
+            </label>
+            <input
+              name="contactEmail"
+              id="contact_email"
+              type="email"
+              className={`${fieldClasses}`}
+              placeholder="Email address for applicants"
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="contact_phone"
+              className="font-bold text-sm mb-1"
+            >
+              Job Listing Name
+            </label>
+            <input
+              name="contactPhone"
+              id="contact_phone"
+              type="tel"
+              className={`${fieldClasses}`}
+              placeholder="Optional phone for applicants"
+            />
+          </div>
         </form>
       </div>
     </section>
