@@ -54,6 +54,7 @@ const AddJobPage = () => {
               placeholder="Add any job duties, expectations, requirements, etc"
             />
           </div>
+
           <div>
             <label htmlFor="job_salary" className="font-bold text-sm mb-1">
               Salary
@@ -69,8 +70,19 @@ const AddJobPage = () => {
               <option value="$80K - $90K">$80K - $90K</option>
               <option value="$90K - $100K">$90K - $100K</option>
               <option value="$100K - $110K">$100K - $110K</option>
+              <option value="$110K - $120K">$110K - $120K</option>
+              <option value="$120K - $130K">$120K - $130K</option>
+              <option value="$130K - $140K">$130K - $140K</option>
+              <option value="$140K - $150K">$140K - $150K</option>
+              <option value="$150K - $160K">$150K - $160K</option>
+              <option value="$160K - $170K">$160K - $170K</option>
+              <option value="$170K - $180K">$170K - $180K</option>
+              <option value="$180K - $190K">$180K - $190K</option>
+              <option value="$190K - $200K">$190K - $200K</option>
+              <option value="over $200K">over $200K</option>
             </select>
           </div>
+
           <div>
             <label htmlFor="job_location" className="font-bold text-sm mb-1">
               Location
@@ -114,6 +126,7 @@ const AddJobPage = () => {
               placeholder="Add a brief overview about your company, your vision, etc"
             />
           </div>
+
           <div>
             <label htmlFor="contact_email" className="font-bold text-sm mb-1">
               Contact Email
@@ -126,6 +139,7 @@ const AddJobPage = () => {
               placeholder="Email address for applicants"
             />
           </div>
+
           <div>
             <label htmlFor="contact_phone" className="font-bold text-sm mb-1">
               Contact Phone
