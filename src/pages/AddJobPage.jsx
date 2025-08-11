@@ -100,7 +100,10 @@ const AddJobPage = () => {
           </div>
 
           <div>
-            <label htmlFor="company_description" className="font-bold text-sm mb-1">
+            <label
+              htmlFor="company_description"
+              className="font-bold text-sm mb-1"
+            >
               Description
             </label>
             <textarea
@@ -112,10 +115,7 @@ const AddJobPage = () => {
             />
           </div>
           <div>
-            <label
-              htmlFor="contact_email"
-              className="font-bold text-sm mb-1"
-            >
+            <label htmlFor="contact_email" className="font-bold text-sm mb-1">
               Contact Email
             </label>
             <input
@@ -127,11 +127,8 @@ const AddJobPage = () => {
             />
           </div>
           <div>
-            <label
-              htmlFor="contact_phone"
-              className="font-bold text-sm mb-1"
-            >
-              Job Listing Name
+            <label htmlFor="contact_phone" className="font-bold text-sm mb-1">
+              Contact Phone
             </label>
             <input
               name="contactPhone"
@@ -140,6 +137,15 @@ const AddJobPage = () => {
               className={`${fieldClasses}`}
               placeholder="Optional phone for applicants"
             />
+          </div>
+
+          <div className="w-full flex flex-row items-center justify-center py-5">
+            <button
+              className="bg-indigo-500 text-white font-bold py-2 px-6 rounded-xl hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Add Job
+            </button>
           </div>
         </form>
       </div>
