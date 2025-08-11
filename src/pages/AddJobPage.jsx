@@ -2,12 +2,12 @@ import React from 'react';
 
 const AddJobPage = () => {
   const fieldClasses =
-    'rounded-lg w-full px-4 py-2 border-[1px] border-indigo-100 focus:border-indigo-600 focus:border-2 focus:outline-indigo-600';
+    'rounded-lg w-full px-4 py-2 border-[1px] border-indigo-100 outline-indigo-100 transition-all duration-500 ease-in-out focus:border-indigo-600 focus:outline-indigo-600';
 
   return (
     <section className="bg-indigo-50 min-h-screen w-full mx-auto">
       <div className="contianer w-full mx-auto flex items-center justify-center px-10 py-16">
-        <form className="rounded-md bg-white w-full max-w-screen-md px-5 py-2 drop-shadow-md felx flex-col space-y-3">
+        <form className="rounded-md bg-white w-full max-w-screen-md px-5 py-2 drop-shadow-md felx flex-col space-y-3 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-300">
           <div className="text-3xl font-bold text-center mt-6 mb-3">
             Add Job
           </div>
