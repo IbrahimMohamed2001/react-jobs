@@ -65,7 +65,7 @@ const AddJobPage = () => {
               id="job_salary"
               className={`block ${fieldClasses}`}
             >
-              <option value="under $50K" selected>under $50K</option>
+              <option value="Under $50K" selected>Under $50K</option>
               <option value="$60K - $70K">$60K - $70K</option>
               <option value="$70K - $80K">$70K - $80K</option>
               <option value="$80K - $90K">$80K - $90K</option>
@@ -80,7 +80,7 @@ const AddJobPage = () => {
               <option value="$170K - $180K">$170K - $180K</option>
               <option value="$180K - $190K">$180K - $190K</option>
               <option value="$190K - $200K">$190K - $200K</option>
-              <option value="over $200K">over $200K</option>
+              <option value="Over $200K">Over $200K`</option>
             </select>
           </div>
 
@@ -156,7 +156,7 @@ const AddJobPage = () => {
 
           <div className="w-full flex flex-row items-center justify-center py-5">
             <button
-              className="bg-indigo-500 text-white font-bold py-2 px-6 rounded-xl hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
+              className="bg-indigo-500 text-white font-bold py-2 px-6 outline rounded-xl hover:bg-indigo-600 hover:outline-4 hover:outline-offset-2 hover:outline-indigo-600 active:bg-indigo-700"
               type="submit"
             >
               Add Job
