@@ -1,9 +1,11 @@
 import {useLoaderData} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import {FaArrowLeft, FaMapMarker} from 'react-icons/fa';
+import {useNavigate} from 'react-router-dom';
 
 const JobPage = () => {
   const job = useLoaderData ();
+  const navigator = useNavigate ();
 
   return (
     <div className="w-full mx-auto min-h-screen bg-indigo-50">
@@ -91,13 +93,28 @@ const JobPage = () => {
 
         {/* Adding delete and edit buttons! */}
         <div className="flex flex-row items-center w-full text-white font-bold justify-center space-x-3 py-3">
-          <Link to={`/jobs/edit/${job.id}`} className="bg-indigo-700 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-indigo-500 hover:-translate-y-0.5">
+          <Link
+            to={`/jobs/edit/${job.id}`}
+            className="bg-indigo-700 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-indigo-500 hover:-translate-y-0.5"
+          >
             Edit Job
           </Link>
 
-          <Link to={`/jobs/delete/${job.id}`} className="bg-red-600 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-red-500 hover:-translate-y-0.5">
+          <button
+            className="bg-red-600 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-red-500 hover:-translate-y-0.5"
+            onClick={async () => {
+              const _ = await fetch (`/api/jobs/${job.id}`, {
+                method: 'DELETE',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+              });
+
+              return navigator ('/jobs');
+            }}
+          >
             Delete Job
-          </Link>
+          </button>
         </div>
       </div>
     </div>
