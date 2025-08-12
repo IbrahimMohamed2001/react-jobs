@@ -58,14 +58,16 @@ const JobCard = ({
           {location}
         </p>
 
-        <Link
-          to={href}
-          className="text-white bg-indigo-600 w-full text-center
-                      rounded-md py-1 transition-all duration-300 
-                      hover:bg-indigo-500"
-        >
-          Read More
-        </Link>
+        <div className="w-full flex justify-end">
+          <Link
+            to={href}
+            className="text-white bg-indigo-600 text-center
+                      rounded-md py-2 px-5 w-full transition-all duration-300 
+                      hover:bg-indigo-500 hover:drop-shadow-lg md:w-auto"
+          >
+            Read More
+          </Link>
+        </div>
       </div>
     </div>
   );
