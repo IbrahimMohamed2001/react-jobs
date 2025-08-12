@@ -17,8 +17,16 @@ const EditJobPage = () => {
   );
 };
 
-const editJob = () => {
-  console.log ('editing the job');
+const editJob = async job => {
+  const _ = await fetch (`/api/jobs/${job.id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify (job),
+  });
+
+  return;
 };
 
 export default EditJobPage;
