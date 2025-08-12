@@ -5,17 +5,18 @@ const JobForm = ({submitButtonTitle = 'Add Job', job}) => {
     'rounded-lg w-full px-4 py-2 border-[1px] border-indigo-100 outline-1 outline-indigo-100 transition-all duration-500 ease-in-out invalid:outline-red-500 invalid:border-red-500 invalid:text-red-500 focus:border-indigo-600 focus:outline-indigo-600 focus:invalid:outline-red-500';
   if (job) {
     console.log (`a job has been provided to update! ${job}`);
+    console.dir (job);
   }
 
-  const [jobType, setJobType] = useState ('Full-Time');
-  const [jobListingName, setJobListingName] = useState ('');
-  const [jobDescription, setJobDescription] = useState ('');
-  const [jobSalary, setJobSalary] = useState ('Under $50K');
-  const [jobLocation, setJobLocation] = useState ('');
-  const [companyName, setCompanyName] = useState ('');
-  const [companyDescription, setCompanyDescription] = useState ('');
-  const [contactEmail, setContactEmail] = useState ('');
-  const [contactPhone, setContactPhone] = useState ('');
+  const [jobType, setJobType] = useState (job ? job.type : "Full-Time");
+  const [jobListingName, setJobListingName] = useState (job ? job.title : '');
+  const [jobDescription, setJobDescription] = useState (job ? job.description : '');
+  const [jobSalary, setJobSalary] = useState (job ? job.salary : 'Under $50K');
+  const [jobLocation, setJobLocation] = useState (job ? job.location : '');
+  const [companyName, setCompanyName] = useState (job ? job.company.name : '');
+  const [companyDescription, setCompanyDescription] = useState (job ? job.company.description : '');
+  const [contactEmail, setContactEmail] = useState (job ? job.company.contactEmail : '');
+  const [contactPhone, setContactPhone] = useState (job ? job.company.contactPhone : '');
 
   return (
     <form className="rounded-md bg-white w-full max-w-screen-md px-5 py-2 drop-shadow-md felx flex-col space-y-3 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-300">
@@ -32,6 +33,7 @@ const JobForm = ({submitButtonTitle = 'Add Job', job}) => {
           onChange={e => {
             setJobType (e.target.value);
           }}
+          value={jobType}
           className={`block ${fieldClasses}`}
         >
           <option value="Full-Time">Full-Time</option>
@@ -52,6 +54,7 @@ const JobForm = ({submitButtonTitle = 'Add Job', job}) => {
           onChange={e => {
             setJobListingName (e.target.value);
           }}
+          value={jobListingName}
           className={`${fieldClasses}`}
           placeholder="eg. Senior React Developer"
         />
@@ -68,6 +71,7 @@ const JobForm = ({submitButtonTitle = 'Add Job', job}) => {
           onChange={e => {
             setJobDescription (e.target.value);
           }}
+          value={jobDescription}
           className={`${fieldClasses}`}
           placeholder="Add any job duties, expectations, requirements, etc"
         />
@@ -83,6 +87,7 @@ const JobForm = ({submitButtonTitle = 'Add Job', job}) => {
           onChange={e => {
             setJobSalary (e.target.value);
           }}
+          value={jobSalary}
           className={`block ${fieldClasses}`}
         >
           <option value="Under $50K">Under $50K</option>
@@ -114,6 +119,7 @@ const JobForm = ({submitButtonTitle = 'Add Job', job}) => {
           onChange={e => {
             setJobLocation (e.target.value);
           }}
+          value={jobLocation}
           type="text"
           className={`${fieldClasses}`}
           placeholder="Company's Location"
@@ -132,6 +138,7 @@ const JobForm = ({submitButtonTitle = 'Add Job', job}) => {
           onChange={e => {
             setCompanyName (e.target.value);
           }}
+          value={companyName}
           type="text"
           className={`${fieldClasses}`}
           placeholder="Company's Name"
@@ -149,6 +156,7 @@ const JobForm = ({submitButtonTitle = 'Add Job', job}) => {
             setCompanyDescription (e.target.value);
           }}
           rows="5"
+          value={companyDescription}
           className={`${fieldClasses}`}
           placeholder="Add a brief overview about your company, your vision, etc"
         />
@@ -164,6 +172,7 @@ const JobForm = ({submitButtonTitle = 'Add Job', job}) => {
           onChange={e => {
             setContactEmail (e.target.value);
           }}
+          value={contactEmail}
           type="email"
           className={`${fieldClasses}`}
           placeholder="Email address for applicants"
@@ -180,6 +189,7 @@ const JobForm = ({submitButtonTitle = 'Add Job', job}) => {
           onChange={e => {
             setContactPhone (e.target.value);
           }}
+          value={contactPhone}
           type="tel"
           className={`${fieldClasses}`}
           placeholder="Optional phone for applicants"
