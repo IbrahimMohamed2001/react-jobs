@@ -103,14 +103,20 @@ const JobPage = () => {
           <button
             className="bg-red-600 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-red-500 hover:-translate-y-0.5"
             onClick={async () => {
-              const _ = await fetch (`/api/jobs/${job.id}`, {
-                method: 'DELETE',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-              });
-
-              return navigator ('/jobs');
+              const confirm = window.confirm (
+                'Are you sure you want to delete this job?'
+              );
+              if (confirm) {
+                const _ = await fetch (`/api/jobs/${job.id}`, {
+                  method: 'DELETE',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                });
+                return navigator ('/jobs');
+              } else {
+                return;
+              }
             }}
           >
             Delete Job
