@@ -1,10 +1,12 @@
 import {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 const JobForm = ({
   submitButtonTitle = 'Add Job',
   job,
   submitFunction = () => {},
 }) => {
+  const navigate = useNavigate ();
   const fieldClasses =
     'rounded-lg w-full px-4 py-2 border-[1px] border-indigo-100 outline-1 outline-indigo-100 transition-all duration-500 ease-in-out invalid:outline-red-500 invalid:border-red-500 invalid:text-red-500 focus:border-indigo-600 focus:outline-indigo-600 focus:invalid:outline-red-500';
 
@@ -212,7 +214,6 @@ const JobForm = ({
             e.preventDefault ();
 
             const newJob = {
-              id: submitButtonTitle === 'Add Job' ? 0 : job.id,
               title: jobListingName,
               type: jobType,
               location: jobLocation,
@@ -226,6 +227,10 @@ const JobForm = ({
               },
             };
             submitFunction (newJob);
+
+            return submitButtonTitle === 'Add Job'
+              ? navigate ('/jobs')
+              : navigate (`/jobs/${job.id}`);
           }}
         >
           {submitButtonTitle}
