@@ -226,6 +226,7 @@ const JobForm = ({
                 contactPhone: contactPhone,
               },
             };
+            submitButtonTitle === 'Add Job' ? null : (newJob.id = job.id);
             submitFunction (newJob);
 
             return submitButtonTitle === 'Add Job'
