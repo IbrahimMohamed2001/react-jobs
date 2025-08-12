@@ -95,13 +95,13 @@ const JobPage = () => {
         <div className="flex flex-row items-center w-full text-white font-bold justify-center space-x-3 py-3">
           <Link
             to={`/jobs/edit/${job.id}`}
-            className="bg-indigo-700 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-indigo-500 hover:-translate-y-0.5"
+            className="bg-indigo-700 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-indigo-500 hover:-translate-y-0.5 hover:outline hover:outline-[3px] hover:outline-offset-4 hover:outline-indigo-500"
           >
             Edit Job
           </Link>
 
           <button
-            className="bg-red-600 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-red-500 hover:-translate-y-0.5"
+            className="bg-red-600 px-6 py-2 rounded-full drop-shadow-md transition-all duration-300 hover:bg-red-500 hover:-translate-y-0.5 hover:outline hover:outline-[3px] hover:outline-offset-4 hover:outline-red-500"
             onClick={async () => {
               const confirm = window.confirm (
                 'Are you sure you want to delete this job?'
