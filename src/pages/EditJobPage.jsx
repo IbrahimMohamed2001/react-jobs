@@ -1,6 +1,6 @@
 import {useLoaderData} from 'react-router-dom';
 import JobForm from '../components/JobForm';
-
+import { toast } from 'react-toastify';
 const EditJobPage = () => {
   const job = useLoaderData ();
 
@@ -18,13 +18,19 @@ const EditJobPage = () => {
 };
 
 const editJob = async job => {
-  const _ = await fetch (`/api/jobs/${job.id}`, {
+  const result = await fetch (`/api/jobs/${job.id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify (job),
   });
+
+  if (result.ok) {
+    toast.success ('Job Edited Successfully');
+  } else {
+    toast.error ('Something Went Wrong, Please Try Again Later');
+  }
 
   return;
 };

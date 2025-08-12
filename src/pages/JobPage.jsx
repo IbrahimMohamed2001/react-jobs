@@ -2,7 +2,7 @@ import {useLoaderData} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import {FaArrowLeft, FaMapMarker} from 'react-icons/fa';
 import {useNavigate} from 'react-router-dom';
-
+import {toast} from 'react-toastify';
 const JobPage = () => {
   const job = useLoaderData ();
   const navigator = useNavigate ();
@@ -107,12 +107,17 @@ const JobPage = () => {
                 'Are you sure you want to delete this job?'
               );
               if (confirm) {
-                const _ = await fetch (`/api/jobs/${job.id}`, {
+                const result = await fetch (`/api/jobs/${job.id}`, {
                   method: 'DELETE',
                   headers: {
                     'Content-Type': 'application/json',
                   },
                 });
+                if (result.ok) {
+                  toast.success ('Job Deleted Successfully');
+                } else {
+                  toast.error ('Something Went Wrong, Please Try Again Later');
+                }
                 return navigator ('/jobs');
               } else {
                 return;

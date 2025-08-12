@@ -1,6 +1,6 @@
 import React from 'react';
 import JobForm from '../components/JobForm';
-
+import {toast} from 'react-toastify';
 const AddJobPage = () => {
   return (
     <section className="bg-indigo-50 min-h-screen w-full mx-auto">
@@ -12,13 +12,19 @@ const AddJobPage = () => {
 };
 
 const addJob = async job => {
-  const _ = await fetch ('/api/jobs', {
+  const result = await fetch ('/api/jobs', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify (job),
   });
+
+  if (result.ok) {
+    toast.success ('Job Added Successfully');
+  } else {
+    toast.error ('Something Went Wrong, Please Try Again Later');
+  }
 
   return;
 };
