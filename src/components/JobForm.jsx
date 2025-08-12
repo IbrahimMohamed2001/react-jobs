@@ -1,11 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const JobForm = ({submitButtonTitle="Add Job", job}) => {
+const JobForm = ({submitButtonTitle = 'Add Job', job}) => {
   const fieldClasses =
-    'rounded-lg w-full px-4 py-2 border-[1px] border-indigo-100 outline-indigo-100 transition-all duration-500 ease-in-out focus:border-indigo-600 focus:outline-indigo-600';
+    'rounded-lg w-full px-4 py-2 border-[1px] border-indigo-100 outline-1 outline-indigo-100 transition-all duration-500 ease-in-out invalid:outline-red-500 invalid:border-red-500 invalid:text-red-500 focus:border-indigo-600 focus:outline-indigo-600 focus:invalid:outline-red-500';
   if (job) {
     console.log (`a job has been provided to update! ${job}`);
   }
+
+  const [jobType, setJobType] = useState ('Full-Time');
+  const [jobListingName, setJobListingName] = useState ('');
+  const [jobDescription, setJobDescription] = useState ('');
+  const [jobSalary, setJobSalary] = useState ('Under $50K');
+  const [jobLocation, setJobLocation] = useState ('');
+  const [companyName, setCompanyName] = useState ('');
+  const [companyDescription, setCompanyDescription] = useState ('');
+  const [contactEmail, setContactEmail] = useState ('');
+  const [contactPhone, setContactPhone] = useState ('');
+
   return (
     <form className="rounded-md bg-white w-full max-w-screen-md px-5 py-2 drop-shadow-md felx flex-col space-y-3 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-300">
       <div className="text-3xl font-bold text-center mt-6 mb-3">
@@ -18,9 +29,12 @@ const JobForm = ({submitButtonTitle="Add Job", job}) => {
         <select
           name="jobType"
           id="job_type"
+          onChange={e => {
+            setJobType (e.target.value);
+          }}
           className={`block ${fieldClasses}`}
         >
-          <option value="Full-Time" selected>Full-Time</option>
+          <option value="Full-Time">Full-Time</option>
           <option value="Part-Time">Part-Time</option>
           <option value="Remote">Remote</option>
           <option value="Internship">Internship</option>
@@ -35,6 +49,9 @@ const JobForm = ({submitButtonTitle="Add Job", job}) => {
           name="jobListingName"
           id="job_listing_name"
           type="text"
+          onChange={e => {
+            setJobListingName (e.target.value);
+          }}
           className={`${fieldClasses}`}
           placeholder="eg. Senior React Developer"
         />
@@ -48,6 +65,9 @@ const JobForm = ({submitButtonTitle="Add Job", job}) => {
           id="job_description"
           name="jobDescription"
           rows="5"
+          onChange={e => {
+            setJobDescription (e.target.value);
+          }}
           className={`${fieldClasses}`}
           placeholder="Add any job duties, expectations, requirements, etc"
         />
@@ -60,9 +80,12 @@ const JobForm = ({submitButtonTitle="Add Job", job}) => {
         <select
           name="jobSalary"
           id="job_salary"
+          onChange={e => {
+            setJobSalary (e.target.value);
+          }}
           className={`block ${fieldClasses}`}
         >
-          <option value="Under $50K" selected>Under $50K</option>
+          <option value="Under $50K">Under $50K</option>
           <option value="$60K - $70K">$60K - $70K</option>
           <option value="$70K - $80K">$70K - $80K</option>
           <option value="$80K - $90K">$80K - $90K</option>
@@ -88,6 +111,9 @@ const JobForm = ({submitButtonTitle="Add Job", job}) => {
         <input
           name="jobLocation"
           id="job_location"
+          onChange={e => {
+            setJobLocation (e.target.value);
+          }}
           type="text"
           className={`${fieldClasses}`}
           placeholder="Company's Location"
@@ -103,6 +129,9 @@ const JobForm = ({submitButtonTitle="Add Job", job}) => {
         <input
           name="companyName"
           id="company_name"
+          onChange={e => {
+            setCompanyName (e.target.value);
+          }}
           type="text"
           className={`${fieldClasses}`}
           placeholder="Company's Name"
@@ -116,6 +145,9 @@ const JobForm = ({submitButtonTitle="Add Job", job}) => {
         <textarea
           id="company_description"
           name="companyDescription"
+          onChange={e => {
+            setCompanyDescription (e.target.value);
+          }}
           rows="5"
           className={`${fieldClasses}`}
           placeholder="Add a brief overview about your company, your vision, etc"
@@ -129,6 +161,9 @@ const JobForm = ({submitButtonTitle="Add Job", job}) => {
         <input
           name="contactEmail"
           id="contact_email"
+          onChange={e => {
+            setContactEmail (e.target.value);
+          }}
           type="email"
           className={`${fieldClasses}`}
           placeholder="Email address for applicants"
@@ -142,6 +177,9 @@ const JobForm = ({submitButtonTitle="Add Job", job}) => {
         <input
           name="contactPhone"
           id="contact_phone"
+          onChange={e => {
+            setContactPhone (e.target.value);
+          }}
           type="tel"
           className={`${fieldClasses}`}
           placeholder="Optional phone for applicants"
