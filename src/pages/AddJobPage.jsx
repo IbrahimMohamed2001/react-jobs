@@ -11,8 +11,16 @@ const AddJobPage = () => {
   );
 };
 
-const addJob = () => {
-  console.log ('adding new job');
+const addJob = async job => {
+  const _ = await fetch ('/api/jobs', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify (job),
+  });
+
+  return;
 };
 
 export default AddJobPage;
